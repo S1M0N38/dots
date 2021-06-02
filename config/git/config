@@ -1,0 +1,18 @@
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore
+
+[alias]
+    cm = commit -m
+    st = status
+    co = checkout
+    br = branch
+    graph = log --graph --oneline --branches
+
+[include]
+    path = ~/.gitconfig.local
+
+[user]
+    name = S1M0N38
+    email = bertolottosimone@gmail.com
+    signingkey = 9DE9D97F3A218F10
