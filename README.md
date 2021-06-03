@@ -12,11 +12,20 @@ My dotfiles, configuration and installed applications.
 
 ## Programs
 
+- homebrew
 - alacritty
 - docker
 - brave
-- mpv
+- mpv (brew)
 - rectangle
 - telegram
 - transmission
 - whatsapp
+- ffmpeg (brew)
+- gnupg (aka gpg, brew)
+- git-open (github)
+
+## Setup
+
+- ssh key (for Github and other)
+- gpg key (for Github and other)
