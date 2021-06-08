@@ -24,8 +24,10 @@ My dotfiles, configuration and installed applications.
 - ffmpeg (brew)
 - gnupg (aka gpg, brew)
 - git-open (github)
+- neovim (brew)
 
 ## Setup
 
 - ssh key (for Github and other)
 - gpg key (for Github and other)
+- Change DNS system wide
