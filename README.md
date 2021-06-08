@@ -25,6 +25,8 @@ My dotfiles, configuration and installed applications.
 - gnupg (aka gpg, brew)
 - git-open (github)
 - neovim (brew)
+- bat (brew)
+- exa (brew)
 
 ## Setup
 
