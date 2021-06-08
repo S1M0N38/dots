@@ -27,6 +27,10 @@ My dotfiles, configuration and installed applications.
 - neovim (brew)
 - bat (brew)
 - exa (brew)
+- zsh-completions (brew)
+- zsh-syntax-highlighting (brew)
+- zsh-autosuggestions (brew)
+- startship (brew)
 
 ## Setup
 
