@@ -4,6 +4,7 @@ config/mpv/watch_later
 # zsh
 secrets
 .zsh_history
+.zcompdump
 
 # neovim
 config/nvim/plugged
