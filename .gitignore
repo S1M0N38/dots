@@ -1,8 +1,9 @@
 # mpv caches videos
 config/mpv/watch_later
 
-# store secrets (e.g. env vars)
+# zsh
 secrets
+.zsh_history
 
 # neovim
 config/nvim/plugged
