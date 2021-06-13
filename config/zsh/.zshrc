@@ -6,8 +6,8 @@ alias ace="docker run --publish 6878:6878 --rm --tmpfs \"/dev/disk/by-id:noexec,
 alias ls='exa --group-directories-first'
 alias ll='exa -lg --group-directories-first'
 alias la='exa -lag --group-directories-first'
-alias lt='exa --tree --level=2'
-alias ltt='exa --tree --level=3'
+alias lt='exa --tree --level=2 --group-directories-first'
+alias ltt='exa --tree --level=3 --group-directories-first'
 
 # startship
 eval "$(starship init zsh)"
