@@ -7,5 +7,6 @@ secrets
 .zcompdump
 
 # neovim
+config/.local
 config/nvim/plugged
 config/nvim/undodir
