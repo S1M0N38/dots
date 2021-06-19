@@ -31,6 +31,7 @@ My dotfiles, configuration and installed applications.
 - zsh-syntax-highlighting (brew)
 - zsh-autosuggestions (brew)
 - startship (brew)
+- latex (texlive)
 
 ## Setup
 
