@@ -1,13 +1,22 @@
 source "$ZDOTDIR/secrets"
 
 # aliases
-alias f1="curl -s https://gist.githubusercontent.com/S1M0N38/90e18921822bfcc6e9a0785c81f8017b/raw/80c340d21ad7ac700d4f86b54f202f762946a98d/f1.py | python3 -"
-alias ace="docker run --publish 6878:6878 --rm --tmpfs \"/dev/disk/by-id:noexec,rw,size=4k\" magnetikonline/acestream-server"
+alias pi="ssh pi@192.168.178.101"
+alias f1="mpv http://127.0.0.1:8080/playlist.m3u8"
+
+alias ace="docker run --publish 6878:6878 --rm --tmpfs \
+           '/dev/disk/by-id:noexec,rw,size=4k' \
+           magnetikonline/acestream-server"
+
 alias ls='exa --group-directories-first'
 alias ll='exa -lg --group-directories-first'
 alias la='exa -lag --group-directories-first'
 alias lt='exa --tree --level=2 --group-directories-first'
 alias ltt='exa --tree --level=3 --group-directories-first'
+
+# path
+path+=/usr/local/texlive/2021/bin/universal-darwin  # texlive
+export PATH
 
 # startship
 eval "$(starship init zsh)"
