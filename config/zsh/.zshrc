@@ -2,7 +2,7 @@ source "$ZDOTDIR/secrets"
 
 # aliases
 alias pi="ssh pi@192.168.178.101"
-alias f1="mpv http://127.0.0.1:8080/playlist.m3u8"
+alias f1="mpv --no-resume-playback http://127.0.0.1:8080/playlist.m3u8"
 
 alias ace="docker run --publish 6878:6878 --rm --tmpfs \
            '/dev/disk/by-id:noexec,rw,size=4k' \
