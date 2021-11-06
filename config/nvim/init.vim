@@ -2,6 +2,10 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
+Plug 'neovim/nvim-lspconfig'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " vimtex
@@ -35,3 +39,17 @@ nnoremap <C-H> <C-W><C-H>
 
 " mouse
 set mouse=a
+
+" lsp
+lua << EOF
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.texlab.setup{}
+EOF
+
+" snippet
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" autoformatter
+au BufWrite * :Autoformat
