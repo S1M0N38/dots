@@ -16,7 +16,7 @@
 [user]
 	name = S1M0N38
 	email = bertolottosimone@gmail.com
-	signingkey = 9DE9D97F3A218F10
+	signingkey = EF3F69FBF43849A9
 
 [commit]
 	gpgsign = true
