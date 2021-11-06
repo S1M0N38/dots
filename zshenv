@@ -9,6 +9,10 @@ export XDG_CACHE_HOME="$XDG_CONFIG_HOME/.cache"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# llvm
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
