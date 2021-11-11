@@ -1,5 +1,4 @@
 source "$ZDOTDIR/secrets"
-source "$ZDOTDIR/virtualenv-auto-activate.sh"
 
 # aliases
 alias pi="ssh pi@192.168.178.101"
