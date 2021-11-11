@@ -1,6 +1,6 @@
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
@@ -9,7 +9,7 @@ Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " vimtex
-let g:vimtex_view_method = 'skim'
+" let g:vimtex_view_method = 'skim'
 
 " Colors
 set termguicolors
@@ -43,7 +43,7 @@ set mouse=a
 " lsp
 lua << EOF
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.texlab.setup{}
+--require'lspconfig'.texlab.setup{}
 EOF
 
 " snippet
@@ -52,4 +52,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " autoformatter
+" LaTex with latexindent
+" C     with ...
+let g:formatdef_latexindent = '"latexindent -"'
 au BufWrite * :Autoformat
+
