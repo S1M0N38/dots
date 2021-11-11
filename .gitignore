@@ -4,7 +4,9 @@ config/mpv/watch_later
 # zsh
 secrets
 .zsh_history
+.zsh_sessions/
 .zcompdump
+htoprc
 
 # neovim
 config/.local
