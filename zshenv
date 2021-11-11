@@ -7,6 +7,10 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# locale
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
 # llvm
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
