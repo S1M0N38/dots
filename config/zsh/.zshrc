@@ -33,7 +33,7 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 eval "$(starship init zsh)"
 
 # zsh magic
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -i
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
