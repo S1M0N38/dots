@@ -12,3 +12,6 @@ htoprc
 config/.local
 config/nvim/plugged
 config/nvim/undodir
+
+# docker
+config/docker
