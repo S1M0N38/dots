@@ -18,6 +18,7 @@ alias ltt='exa --tree --level=3 --group-directories-first'
 # path
 path+=/usr/local/opt/llvm/bin   # llvm
 path+=$HOME/.local/bin          # pipx
+path+=$HOME/.cargo/bin          # cargo
 export PATH
 
 # fpath
