@@ -1,4 +1,5 @@
 source "$ZDOTDIR/secrets"
+source "$ZDOTDIR/auto-activation-venv.zsh"
 
 # aliases
 alias pi="ssh pi@192.168.178.101"
@@ -24,6 +25,9 @@ export PATH
 # fpath
 fpath+=$ZDOTDIR/.zfunc          # poetry autocompletion
 export FPATH
+
+# gpg prompt (export here makes tmux working)
+export GPG_TTY=$(tty)
 
 # compiation C
 function c ()  { cc $1 && ./a.out && rm a.out; }

@@ -21,9 +21,6 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 # docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 
-# gpg
-export GPG_TTY=$(tty)
-
 # startship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 
