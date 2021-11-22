@@ -1,20 +1,19 @@
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'lervag/vimtex'
-Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Chiel92/vim-autoformat'
+" colorschemes
+Plug 'morhetz/gruvbox'
+Plug 'ishan9299/nvim-solarized-lua'
 call plug#end()
-
-" vimtex
-" let g:vimtex_view_method = 'skim'
 
 " Colors
 set termguicolors
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " Persistent undo
 set undodir=~/.config/nvim/undodir
@@ -43,7 +42,6 @@ set mouse=a
 " lsp
 lua << EOF
 require'lspconfig'.clangd.setup{}
---require'lspconfig'.texlab.setup{}
 EOF
 
 " snippet
