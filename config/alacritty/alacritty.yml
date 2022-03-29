@@ -56,6 +56,7 @@ window:
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
   decorations: none
+  opacity: .9
 # Startup Mode (changes require restart)
 #
 # Values for `startup_mode`:
@@ -734,4 +735,3 @@ alt_send_esc: false
 #log_level: Warn
 # Print all received window events.
 #print_events: false
-background_opacity: 0.85
