@@ -4,6 +4,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Chiel92/vim-autoformat'
+Plug 'github/copilot.vim'
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'ishan9299/nvim-solarized-lua'
@@ -52,6 +53,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " autoformatter
 " LaTex with latexindent
 " C     with ...
-let g:formatdef_latexindent = '"latexindent -"'
-au BufWrite * :Autoformat
+" let g:formatdef_latexindent = '"latexindent -"'
+" au BufWrite * :Autoformat
 
