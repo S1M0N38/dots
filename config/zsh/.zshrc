@@ -29,6 +29,9 @@ export FPATH
 # gpg prompt (export here makes tmux working)
 export GPG_TTY=$(tty)
 
+# font for gnuplot
+export GNUTERM="qt font \"Arial,10\""
+
 # compiation C
 function c ()  { cc $1 && ./a.out && rm a.out; }
 # generate .gitignore
