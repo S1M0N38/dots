@@ -1,5 +1,5 @@
 source "$ZDOTDIR/secrets"
-source "$ZDOTDIR/auto-activation-venv.zsh"
+# source "$ZDOTDIR/auto-activation-venv.zsh"
 
 # aliases
 alias pi="ssh pi@192.168.178.101"
@@ -15,6 +15,10 @@ alias ll='exa -lg --group-directories-first'
 alias la='exa -lag --group-directories-first'
 alias lt='exa --tree --level=2 --group-directories-first'
 alias ltt='exa --tree --level=3 --group-directories-first'
+
+# Keybinds
+bindkey -s "^N" 'alacritty-colorscheme toggle^M'
+bindkey -s "^P" 'alacritty-colorscheme toggle --reverse^M'
 
 # path
 path+=/usr/local/opt/llvm/bin   # llvm
@@ -37,9 +41,6 @@ function c ()  { cc $1 && ./a.out && rm a.out; }
 # generate .gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# startship prompt
-eval "$(starship init zsh)"
-
 # zsh magic
 autoload -Uz compinit && compinit -i
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -47,4 +48,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pipx completions
 autoload -Uz bashcompinit && bashcompinit
+
+# pipx and pyenv
 eval "$(register-python-argcomplete pipx)"
+eval "$(pyenv init -)"
+
+# startship prompt
+eval "$(starship init zsh)"
