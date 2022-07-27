@@ -26,3 +26,6 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 
 # bat
 export BAT_THEME="gruvbox-dark"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
