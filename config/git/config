@@ -1,25 +1,28 @@
 [core]
-	editor = nvim
-	excludesfile = ~/.config/git/ignore
+  editor = lvim
+  excludesfile = ~/.config/git/ignore
 
 [alias]
-	cm = commit -m
-    cs = commit -S -m
-	st = status
-	co = checkout
-	br = branch
-	graph = log --graph --oneline --branches
+  cm = commit -m
+  cs = commit -S -m
+  st = status
+  co = checkout
+  br = branch
+  graph = log --graph --oneline --branches
 
 [include]
-	path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 
 [user]
-	name = S1M0N38
-	email = bertolottosimone@gmail.com
-	signingkey = EF3F69FBF43849A9
+  name = S1M0N38
+  email = bertolottosimone@gmail.com
+  signingkey = EF3F69FBF43849A9
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [gpg]
-	program = /usr/local/bin/gpg
+  program = /usr/local/bin/gpg
+
+[init]
+  defaultBranch = main
