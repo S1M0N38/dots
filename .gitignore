@@ -1,17 +1,19 @@
+# docker
+config/docker
+
+# htop
+config/htop
+
+# LunarVim
+config/lvim
+
 # mpv caches videos
 config/mpv/watch_later
 
 # zsh
-secrets
+.zfunc
+plugins
+.zcompdump
 .zsh_history
 .zsh_sessions/
-.zcompdump
-htoprc
-
-# neovim
-config/.local
-config/nvim/plugged
-config/nvim/undodir
-
-# docker
-config/docker
+zsh-secrets
