@@ -1,57 +1,61 @@
-source "$ZDOTDIR/secrets"
-# source "$ZDOTDIR/auto-activation-venv.zsh"
+source "$ZDOTDIR/zsh-functions"
 
-# aliases
-alias pi="ssh pi@192.168.178.101"
-alias f1="mpv --no-resume-playback http://127.0.0.1:8080/playlist.m3u8"
-alias msl="cd ~/Developer/morningstreams/ && python3 f1.py"
-alias ms="cd ~/Developer/morningstreams/ && python3 f1.py --ip 192.168.178.100"
-alias ace="docker run --name ace --publish 6878:6878 --rm --tmpfs \
-    '/dev/disk/by-id:noexec,rw,size=4k' \
-    magnetikonline/acestream-server"
+# Basics
+setopt no_beep
 
-alias ls='exa --group-directories-first'
-alias ll='exa -lg --group-directories-first'
-alias la='exa -lag --group-directories-first'
-alias lt='exa --tree --level=2 --group-directories-first'
-alias ltt='exa --tree --level=3 --group-directories-first'
+# Changing Directories
+setopt auto_cd
 
-# Keybinds
-bindkey -s "^N" 'alacritty-colorscheme toggle^M'
-bindkey -s "^P" 'alacritty-colorscheme toggle --reverse^M'
+# History
+setopt append_history
+setopt extended_history
+setopt inc_append_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+setopt share_history
 
-# path
-path+=/usr/local/opt/llvm/bin   # llvm
-path+=$HOME/.local/bin          # pipx
-path+=$HOME/.cargo/bin          # cargo
-export PATH
+# Correction
+unsetopt correct_all
+setopt correct
 
-# fpath
-fpath+=$ZDOTDIR/.zfunc          # poetry autocompletion
-export FPATH
+# Enble colors
+autoload -Uz colors && colors
 
-# gpg prompt (export here makes tmux working)
+# Import zsh files
+zsh_add_file "zsh-aliases"
+zsh_add_file "zsh-secrets"
+
+# Plugins
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "zsh-users/zsh-completions"
+
+# Completions for fzf
+source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+# Completions zsh
+zmodload zsh/complist
+autoload -U compinit; compinit
+_comp_options+=(globdots)
+setopt always_to_end
+setopt auto_menu
+setopt auto_name_dirs
+setopt complete_in_word
+unsetopt menu_complete
+
+# gpg prompt
 export GPG_TTY=$(tty)
 
-# font for gnuplot
-export GNUTERM="qt font \"Arial,10\""
+# completions for python scripts 
+# eval "$(register-python-argcomplete pipx)"
+# eval "$(register-python-argcomplete jt)"
 
-# compiation C
-function c ()  { cc $1 && ./a.out && rm a.out; }
-# generate .gitignore
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
-# zsh magic
-autoload -Uz compinit && compinit -i
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# pipx completions
-autoload -Uz bashcompinit && bashcompinit
-
-# pipx and pyenv
-eval "$(register-python-argcomplete pipx)"
-eval "$(pyenv init -)"
+# pyenv
+# eval "$(pyenv init -)"
 
 # startship prompt
 eval "$(starship init zsh)"
