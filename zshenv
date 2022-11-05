@@ -9,7 +9,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
 
 # config dir
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
