@@ -1,19 +1,18 @@
-# docker
+# config
 config/docker
-
-# htop
-config/htop
-
-# LunarVim
-config/lvim
-
-# mpv caches videos
+config/ipython
+config/jupyter
+config/lvim/plugins
+config/mitmproxy
 config/mpv/watch_later
+config/nvm
+config/tmux
 
-# zsh
-.zfunc
-plugins
-.zcompdump
-.zsh_history
-.zsh_sessions/
-zsh-secrets
+# zsh 
+zsh/.zfunc/_poetry
+zsh/.zfunc/_docker-compose
+zsh/.zsh_sessions/
+zsh/plugins
+zsh/.zcompdump*
+zsh/zsh_history
+zsh/zsh-secrets
