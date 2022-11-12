@@ -3303,4 +3303,5 @@ endif
 " Term colors: grey red        green        yellow        blue        purple        aqua        bg0
 " Background: any
 " vim: et ts=2 sw=2
+" vim: set ft="":
 
