@@ -5,15 +5,27 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# applications
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-
-# config dir
+# XDG Base Directory
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export TERMINFO="$XDG_DATA_HOME/terminfo"
+export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# applications
+export EDITOR="vim"
+export VISUAL="lvim"
+export TERMINAL="alacritty"
 
 # locale
 export LANG="en_US.UTF-8"
@@ -23,12 +35,13 @@ export LC_ALL="en_US.UTF-8"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-
 # go
 export GOPATH="$HOME/go"
 export GOROOT="/usr/local/opt/go/libexec"
+
+# lf
+export LF_COLORS="$XDG_CONFIG_HOME/lf/colors"
+export LF_ICONS="$XDG_CONFIG_HOME/lf/icons"
 
 # bat
 export BAT_THEME="gruvbox-dark"
@@ -53,7 +66,7 @@ export FZF_CTRL_T_OPTS="
 path+=/usr/local/opt/llvm/bin   # llvm
 path+=/usr/local/opt/fzf/bin    # fzf
 path+=$HOME/.local/bin          # pipx
-path+=$HOME/.cargo/bin          # cargo
+path+=$CARGO_HOME/env           # cargo
 path+=$GOPATH/bin               # go user bin
 path+=$GOROOT/bin               # go lib bin
 export PATH
