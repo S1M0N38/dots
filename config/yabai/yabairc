@@ -1,0 +1,20 @@
+yxabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+yabai -m config layout floating
+yabai -m config focus_follows_mouse autofocus
+
+yabai -m rule --add app="^System Preferences$" manage=off
+
+yabai -m config window_opacity off
+yabai -m config active_window_opacity 0.8
+yabai -m config normal_window_opacity 0.8
+yabai -m config window_opacity_duration .5
+yabai -m config window_border off
+yabai -m config window_border_blur off
+
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap     8
