@@ -1,15 +1,15 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "gruvbox-baby"
 
 -- colorscheme
+lvim.colorscheme = "gruvbox-baby"
 vim.g.gruvbox_baby_transparent_mode = 1
 
 -- keymappings
 lvim.leader = "space"
 lvim.builtin.which_key.mappings["x"] = {
-  name = "+LaTex",
+  name = "+LaTeX",
   c = { "<cmd>TexlabBuild<cr>", "Compile" },
   x = { "<cmd>TexlabForward<cr>", "Compile and Search" },
 }
@@ -21,7 +21,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 -- lsp
 lvim.lsp.installer.setup.ensure_installed = {
-  "pyright", "texlab", "ltex",
+  "pyright", "texlab",
 }
 
 -- formatters
@@ -31,16 +31,14 @@ formatters.setup {
   { command = "isort", filetypes = { "python" } },
 }
 
--- plugins 
+-- plugins
 lvim.plugins = {
   { 'luisiacc/gruvbox-baby' },
-  { 'f3fora/nvim-texlabconfig', run = "go build -o $GOPATH/bin/" }
+  { 'f3fora/nvim-texlabconfig',
+    ft = { 'tex', 'bib' },
+    run = "go build -o $GOPATH/bin/",
+    -- config = ... line must be include see
+    -- https://github.com/f3fora/nvim-texlabconfig/issues/9
+    config = function() require('texlabconfig').setup() end,
+  }
 }
-
--- autocommands
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "zsh",
-  callback = function()
-    require("nvim-treesitter.highlight").attach(0, "bash")
-  end,
-})
