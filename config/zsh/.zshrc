@@ -25,13 +25,15 @@ setopt correct
 autoload -Uz colors && colors
 
 # Import zsh files
-zsh_add_file "zsh-aliases"
-zsh_add_file "zsh-secrets"
+⚡️source "zsh-aliases"
+⚡️source "zsh-prompt"
+⚡️source "zsh-secrets"
 
 # Plugins
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "zsh-users/zsh-completions"
+⚡️plugin "zap-zsh/vim"
+⚡️plugin "zsh-users/zsh-autosuggestions"
+⚡️plugin "zsh-users/zsh-syntax-highlighting"
+⚡️plugin "zsh-users/zsh-completions"
 
 # Completions for fzf
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
@@ -47,8 +49,18 @@ setopt auto_name_dirs
 setopt complete_in_word
 unsetopt menu_complete
 
-# gpg prompt
+# gpg prompt (export here, not in zshenv)
 export GPG_TTY=$(tty)
+
+# enable nvm
+source "$NVM_DIR/nvm.sh"
+
+# enable cd while using lf
+source "$XDG_CONFIG_HOME/lf/lfcd.sh"
+
+# key-bindings
+bindkey -s '^e' '$VISUAL $(fzf)^M'
+bindkey -s '^F' 'lf^M'
 
 # completions for python scripts 
 # eval "$(register-python-argcomplete pipx)"
@@ -58,4 +70,4 @@ export GPG_TTY=$(tty)
 # eval "$(pyenv init -)"
 
 # startship prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
