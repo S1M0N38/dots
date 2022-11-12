@@ -1,0 +1,102 @@
+" Improving on minimal at
+"
+" https://github.com/lemonase/dotfiles/blob/
+" ab2d279804a8a6b5e6862012c13bd22b64076431/
+" config/vim/.vim/vimrc.min
+"
+
+" Environment XDG
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
+" Load system defaults
+if filereadable(expand('$VIMRUNTIME/defaults.vim'))
+  unlet! g:skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+endif
+
+
+"Regular Settings
+"----------------
+
+" leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" ui
+set number
+set ruler
+set wildmenu
+set showcmd
+set showmatch
+
+" colorscheme
+set background=dark
+silent! colorscheme gruvbox8
+
+" cursor shape based on mode
+if exists('$TMUX')
+  let &t_SI = "\ePtmux;\e\e[5 q\e\\"
+  let &t_EI = "\ePtmux;\e\e[2 q\e\\"
+else
+  let &t_SI = "\e[5 q"
+  let &t_EI = "\e[2 q"
+endif
+
+" encoding/format
+set encoding=utf-8
+set fileformats=unix,dos,mac
+
+" searching
+set hlsearch!
+set incsearch
+set ignorecase
+set smartcase
+nnoremap <silent> <leader>h :noh<CR>
+
+" indent
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set autoindent
+
+" key timeout values
+set ttimeoutlen=20
+set timeoutlen=1000
+
+" allow syntax and filetype plugins
+syntax enable
+filetype plugin indent on
+runtime macros/matchit.vim
+
+" disable caches
+set viminfo=
+set noswapfile
+set nobackup
+set nowritebackup
+
+" disable bell
+set belloff=all
+
+
+" Autocmds
+"---------
+augroup general
+  autocmd!
+  "keep equal proportions when windows resized
+   autocmd VimResized * wincmd =
+   "save cursor position in a file
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"")
+                \ <= line("$") | exe "normal! g'\"" | endif
+augroup END
+
+augroup languages
+  autocmd!
+  autocmd BufNewFile,BufRead *.bash set syntax=sh
+  autocmd FileType html :syntax sync fromstart
+  autocmd FileType html,javascript,css,json,yaml,sh,vim
+          \ setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
