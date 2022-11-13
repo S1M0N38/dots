@@ -40,5 +40,9 @@ lvim.plugins = {
     -- config = ... line must be include see
     -- https://github.com/f3fora/nvim-texlabconfig/issues/9
     config = function() require('texlabconfig').setup() end,
+    -- Enable back search on Skim -> Preference -> Sync:
+    --    Preset: Custom
+    --   Command: ~/go/bin/nvim-texlabconfig
+    -- Arguments: -file '%file' -line %line -cache_root ~/.cache/lvim
   }
 }
