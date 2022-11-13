@@ -16,7 +16,7 @@
   signingkey = ~/.ssh/id_ed25519.pub 
 
 [commit]
-  gpgsign = false
+  gpgsign = true
 
 [gpg]
 	format = ssh
