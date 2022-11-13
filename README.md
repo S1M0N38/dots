@@ -14,7 +14,7 @@
 
 1. [Change DNS](https://support.apple.com/en-in/guide/mac-help/mh14127/11.0/mac/11.0)
 
-1. Many programs are installed using (Homebrew)[https://brew.sh/] Package Manager
+1. Many programs are installed using [Homebrew](https://brew.sh/) Package Manager
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
