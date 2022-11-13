@@ -10,19 +10,16 @@
   br = branch
   graph = log --graph --oneline --branches
 
-[include]
-  path = ~/.gitconfig.local
-
 [user]
   name = S1M0N38
   email = bertolottosimone@gmail.com
-  signingkey = EF3F69FBF43849A9
+  signingkey = ~/.ssh/id_ed25519.pub 
 
 [commit]
   gpgsign = false
 
 [gpg]
-  program = /usr/local/bin/gpg
+	format = ssh
 
 [init]
   defaultBranch = main
