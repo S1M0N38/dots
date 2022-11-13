@@ -37,12 +37,11 @@ lvim.plugins = {
   { 'f3fora/nvim-texlabconfig',
     ft = { 'tex', 'bib' },
     run = "go build -o $GOPATH/bin/",
-    -- config = ... line must be include see
-    -- https://github.com/f3fora/nvim-texlabconfig/issues/9
     config = function() require('texlabconfig').setup() end,
     -- Enable back search on Skim -> Preference -> Sync:
     --    Preset: Custom
-    --   Command: ~/go/bin/nvim-texlabconfig
-    -- Arguments: -file '%file' -line %line -cache_root ~/.cache/lvim
+    --   Command: /Users/simo/go/bin/nvim-texlabconfig
+    -- Arguments: -file '%file' -line %line -cache_root /Users/simo/.cache/lvim
+    -- (Commands and Arguments accept only full path, change '/User/simo')
   }
 }
