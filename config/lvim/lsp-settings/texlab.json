@@ -1,8 +1,0 @@
-{
-  "texlab.rootDirectory": null,
-  "texlab.build.executable": "tectonic",
-  "texlab.build.args": ["-X", "compile", "%f", "--synctex", "--keep-logs", "--keep-intermediates"],
-  "texlab.build.onSave": true,
-  "texlab.forwardSearch.executable": "/Applications/Skim.app/Contents/SharedSupport/displayline",
-  "texlab.forwardSearch.args": ["-g", "%l", "%p", "%f"]
-}
