@@ -1,4 +1,5 @@
-source "$ZDOTDIR/zsh-functions"
+# Enable zap plugin manager
+source "$XDG_DATA_HOME/zap/zap.zsh"
 
 # Basics
 setopt no_beep
@@ -25,15 +26,16 @@ setopt correct
 autoload -Uz colors && colors
 
 # Import zsh files
-⚡️source "zsh-aliases"
-⚡️source "zsh-prompt"
-⚡️source "zsh-secrets"
+plug "$ZDOTDIR/zsh-aliases"
+plug "$ZDOTDIR/zsh-prompt"
+plug "$ZDOTDIR/zsh-secrets"
 
 # Plugins
-⚡️plugin "zap-zsh/vim"
-⚡️plugin "zsh-users/zsh-autosuggestions"
-⚡️plugin "zsh-users/zsh-syntax-highlighting"
-⚡️plugin "zsh-users/zsh-completions"
+plug "zap-zsh/vim"
+plug "S1M0N38/auto-venv"
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-completions"
 
 # Completions for fzf
 source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
@@ -49,9 +51,6 @@ setopt auto_name_dirs
 setopt complete_in_word
 unsetopt menu_complete
 
-# gpg prompt (export here, not in zshenv)
-export GPG_TTY=$(tty)
-
 # enable nvm
 source "$NVM_DIR/nvm.sh"
 
@@ -62,12 +61,12 @@ source "$XDG_CONFIG_HOME/lf/lfcd.sh"
 bindkey -s '^e' '$VISUAL $(fzf)^M'
 bindkey -s '^F' 'lf^M'
 
+# pyenv
+eval "$(pyenv init -)"
+
 # completions for python scripts 
 # eval "$(register-python-argcomplete pipx)"
 # eval "$(register-python-argcomplete jt)"
-
-# pyenv
-# eval "$(pyenv init -)"
 
 # startship prompt
 # eval "$(starship init zsh)"

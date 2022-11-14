@@ -12,8 +12,6 @@
 
 ## :arrow_down: Installation
 
-1. [Change DNS](https://support.apple.com/en-in/guide/mac-help/mh14127/11.0/mac/11.0)
-
 1. Many programs are installed using [Homebrew](https://brew.sh/) Package Manager
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -22,6 +20,11 @@
 2. SSH keys ([tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)) are useful for:
   - to ssh into external computer (e.g. Raspberry Pi) 
   - signing git commit
+
+3. Install [zap](https://github.com/zap-zsh/zap) as zsh plugins manager
+```bash
+sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+```
 
 3. Clone this repo and soft link
 ```bash
@@ -64,4 +67,4 @@ brew install --cask                          \
 
 ## :gear: Settings
 
-> TODO
+- [Change DNS](https://support.apple.com/en-in/guide/mac-help/mh14127/11.0/mac/11.0)
