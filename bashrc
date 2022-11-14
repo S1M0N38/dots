@@ -66,10 +66,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="vim"
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
-# locale
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-
 # exa: ls replacement
 alias ls='exa --group-directories-first'
 alias ll='exa -lg --group-directories-first'
@@ -79,3 +75,13 @@ alias ltt='exa --tree --level=3 --group-directories-first'
 
 # networking
 alias IP='curl https://wtfismyip.com/text'
+
+# prompt
+function parse_git_dirty {
+  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+}
+export PS1="\n\t \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
