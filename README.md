@@ -51,7 +51,13 @@ sudo apt install -y git vim exa htop python3-pip
 ```bash
 git clone https://github.com/S1M0N38/dots.git ~/dots
 ```
-> TODO
+
+7. Enter dots and switch to rpi branch
+```bash
+cd ~/dots && git checkout rpi
+```
+
+8. Install dots files
 ```bash
 ln -f -s ~/dots/bashrc ~/.bashrc && \
 ln -f -s ~/dots/config ~/.config
