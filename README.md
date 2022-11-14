@@ -3,68 +3,56 @@
 ## :computer: Specifications
 
 - **Device**: MacBook Air (13-inch, Early 2014)
-- **Processor**: 1,7 GHz Dual-Core Intel Core i7
-- **Memory**: 8 GB 1600 MHz DDR3
-- **Graphics**: Intel HD Graphics 5000 1536 MB
-- **OS**: macOS Big Sur (Version 11.7.1)
-
+- **SD**: Samsung EVO 32GB  
+- **OS**: Raspberry Pi OS Lite (64-bit)
 ---
+
+## :zap: Flash SD Card
+
+1. Download latest Raspberry Pi OS Lite (64-bit) 
+  ([website](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit))
+
+2. Erase SD formatting as MS-DOS(FAT) and identify SD name with
+```bash
+diskutil list
+```
+
+3. Let `/dev/disk420` be the name of the disk. Unmount SD 
+```bash
+diskutil unmountdisk /dev/disk420
+```
+
+4. Flash Raspberry Pi Os. Use `rdisk420` instead of `disk420`. Show progress with <kbd>Ctrl</kbd>T.
+```bash
+sudo dd if=<path/to/raspberrypi-os.img> of=/dev/rdisk420 bs=2m
+```
+This operation take 1-2 minutes.
+
 
 ## :arrow_down: Installation
 
-1. Many programs are installed using [Homebrew](https://brew.sh/) Package Manager
+1. [Setup static IP](https://pimylifeup.com/raspberry-pi-static-ip-address/)
+
+2. Enable SSH: `sudo raspi-config` → Interfacing Options → SSH → Enable
+
+3. [Setup Raspberry Pi SSH Keys for Authentication](https://pimylifeup.com/raspberry-pi-ssh-keys/)
+
+4. Update repos, upgrade software and reboot
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt update -y  && sudo apt upgrade -y && sudo reboot
 ```
 
-2. SSH keys ([tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)) are useful for:
-  - to ssh into external computer (e.g. Raspberry Pi) 
-  - signing git commit
-
-3. Install [zap](https://github.com/zap-zsh/zap) as zsh plugins manager
+5. Install CLI programs
 ```bash
-sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+sudo apt install -y git vim exa htop python3-pip
 ```
 
-3. Clone this repo and soft link
+6. Clone this repo and soft link
 ```bash
-mkdir ~/Developer && \
-git clone git@github.com:S1M0N38/dots.git ~/Developer/dots
+git clone https://github.com/S1M0N38/dots.git ~/dots
 ```
+> TODO
 ```bash
-ln -s ~/Developer/dots/zshenv ~/.zshenv
-ln -s ~/Developer/dots/config ~/.config
+ln -f -s ~/dots/bashrc ~/.bashrc && \
+ln -f -s ~/dots/config ~/.config
 ```
-
-4. Install CLI programs
-```bash
-brew install                                \
-  bat bottom exa fd fzf git go lazygit lf   \
-  neovim pyenv ripgrep skhd tectonic texlab \
-  yabai
-```
-
-5. Install GUI programs
-```bash
-brew install --cask                          \
-  rectangle alacritty mpv notunes            \
-  transmission skim the-unarchiver           \
-  tunnelblick
-```
-
-6. Other applications
-- [Docker](https://docs.docker.com/desktop/install/mac-install/) 
-- [Telegram](https://macos.telegram.org/)
-- [Whatsapp](https://www.whatsapp.com/download)
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Nvm](https://github.com/nvm-sh/nvm)
-- [Git-open](https://github.com/paulirish/git-open)
-- [GPG](https://gist.github.com/S1M0N38/165024e05d29159441af9972da3847eb)
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- [LunarVim](https://github.com/S1M0N38/dots/edit/main/README.md)
-
----
-
-## :gear: Settings
-
-- [Change DNS](https://support.apple.com/en-in/guide/mac-help/mh14127/11.0/mac/11.0)
