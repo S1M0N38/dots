@@ -62,3 +62,16 @@ cd ~/dots && git checkout rpi
 ln -f -s ~/dots/bashrc ~/.bashrc && \
 ln -f -s ~/dots/config ~/.config
 ```
+
+---
+
+## :strawberry: Projects
+
+- [VPN](https://gist.github.com/S1M0N38/77ad8d3cb5e481aa802d43636881279c) →
+ install a vpn on raspberry pi.
+
+- [morningstreams](https://github.com/S1M0N38/morningstreams) →
+expose acestreams from morningstream in you local network.
+
+- [cr-analysis](https://github.com/S1M0N38/cr-analysis/tree/main) →
+an exercise in data collection/analysis.
