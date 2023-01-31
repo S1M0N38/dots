@@ -7,7 +7,7 @@ cmd + shift - return : /Applications/Firefox.app/Contents/MacOS/firefox --single
 cmd - m : open -na /Applications/mpv.app $(pbpaste)
 
 ## Restart skhd and yabai
-cmd + shift - r : skhd -r && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+ctrl + alt + cmd - r : skhd -r && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Window Manager
 # focus window
