@@ -1,0 +1,3 @@
+--cookies-from-browser firefox
+--merge-output-format mkv
+--concurrent-fragments 10
