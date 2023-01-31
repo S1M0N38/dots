@@ -61,7 +61,7 @@ brew install --cask                          \
 - [Git-open](https://github.com/paulirish/git-open)
 - [GPG](https://gist.github.com/S1M0N38/165024e05d29159441af9972da3847eb)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- [LunarVim](https://github.com/S1M0N38/dots/edit/main/README.md)
+- [LunarVim](https://www.lunarvim.org/)
 
 ---
 
