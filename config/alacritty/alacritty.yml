@@ -2,7 +2,8 @@
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 import:
-  - ~/Developer/alacritty-theme/themes/gruvbox_dark.yaml
+  - ~/Developer/dots/config/alacritty/themes/gruvbox_dark.yaml
+  #  - ~/Developer/dots/config/alacritty/themes/gruvbox_light.yaml
 
 window:
   dimensions:
