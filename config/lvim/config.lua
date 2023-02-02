@@ -1,6 +1,6 @@
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = false
+lvim.format_on_save.enabled = false
 vim.o.relativenumber = true
 
 -- colorscheme
@@ -40,9 +40,9 @@ lvim.plugins = {
     run = "go build -o $GOPATH/bin/",
     config = function() require('texlabconfig').setup() end,
     -- Enable back search on Skim -> Preference -> Sync:
-    --    Preset: Custom
+    --   Preset: Custom
     --   Command: /Users/simo/go/bin/nvim-texlabconfig
-    -- Arguments: -file '%file' -line %line -cache_root /Users/simo/.cache/lvim
+    --   Arguments: -file '%file' -line %line -cache_root /Users/simo/.cache/lvim
     -- (Commands and Arguments accept only full path, change '/User/simo')
   }
 }
