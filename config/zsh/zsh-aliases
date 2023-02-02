@@ -1,7 +1,7 @@
 RPI_LOCAL_IP="192.168.178.101"
 
 # tmp alias while my neovim config is broken
-alias nvim="lvim"
+# alias nvim="lvim"
 
 # networking
 alias ip='curl https://wtfismyip.com/text'
