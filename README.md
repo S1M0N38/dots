@@ -2,7 +2,7 @@
 
 ## :computer: Specifications
 
-- **Device**: MacBook Air (13-inch, Early 2014)
+- **Device**: Raspberry Pi 3 Model B
 - **SD**: Samsung EVO 32GB  
 - **OS**: Raspberry Pi OS Lite (64-bit)
 ---
