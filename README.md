@@ -6,7 +6,7 @@
 - **Processor**: 1,7 GHz Dual-Core Intel Core i7
 - **Memory**: 8 GB 1600 MHz DDR3
 - **Graphics**: Intel HD Graphics 5000 1536 MB
-- **OS**: macOS Big Sur (Version 11.7.1)
+- **OS**: macOS Monterey (Version 12.6.3)
 
 ---
 
@@ -18,12 +18,13 @@
 ```
 
 2. SSH keys ([tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)) are useful for:
-  - to ssh into external computer (e.g. Raspberry Pi) 
+  - to ssh into external computer 
+  - pull/push private and public repo on GitHub
   - signing git commit
 
 3. Install [zap](https://github.com/zap-zsh/zap) as zsh plugins manager
 ```bash
-sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
 ```
 
 3. Clone this repo and soft link
@@ -39,16 +40,15 @@ ln -s ~/Developer/dots/config ~/.config
 4. Install CLI programs
 ```bash
 brew install                                \
-  bat bottom exa fd fzf git go lazygit lf   \
+  bat htop exa fd fzf git go lazygit lf     \
   neovim pyenv ripgrep skhd tectonic texlab \
-  yabai
 ```
 
 5. Install GUI programs
 ```bash
-brew install --cask                          \
-  rectangle alacritty mpv notunes            \
-  transmission skim the-unarchiver           \
+brew install --cask                         \
+  rectangle alacritty mpv notunes           \
+  transmission skim the-unarchiver          \
   tunnelblick
 ```
 
