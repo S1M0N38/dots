@@ -1,0 +1,9 @@
+[papers]
+dir = ~/Documents/papers
+
+[settings]
+opentool = open
+default-library = papers
+picktool = fzf
+add-confirm = True
+
