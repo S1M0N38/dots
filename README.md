@@ -35,6 +35,7 @@ git clone git@github.com:S1M0N38/dots.git ~/Developer/dots
 ```bash
 ln -s ~/Developer/dots/zshenv ~/.zshenv
 ln -s ~/Developer/dots/config ~/.config
+ln -s ~/Developer/dots/keyboard ~/Library/LaunchAgents/com.local.KeyRemapping.plist
 ```
 
 4. Install CLI programs
