@@ -32,9 +32,9 @@ export TERMINAL="alacritty"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-# llvm
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
+# papis.nvim compilation
+export MACOSX_DEPLOYMENT_TARGET="12.6"
+export YAML_DIR="/usr/local/Cellar/libyaml/0.2.5/"
 
 # go
 export GOPATH="$HOME/go"
