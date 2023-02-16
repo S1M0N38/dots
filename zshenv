@@ -62,6 +62,8 @@ export FZF_CTRL_T_OPTS="
   --no-height 
   --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
+# kaggle
+export KAGGLE_CONFIG_DIR="$XDG_CONFIG_HOME/kaggle"
 
 # PATH
 path+=/usr/local/opt/llvm/bin   # llvm
