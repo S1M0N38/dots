@@ -60,6 +60,7 @@ source "$XDG_CONFIG_HOME/lf/lfcd.sh"
 # key-bindings
 bindkey -s '^e' '$VISUAL $(fzf)^M'
 bindkey -s '^F' 'lf^M'
+bindkey -s '^P' 'papis open^M'
 
 # pyenv
 eval "$(pyenv init -)"
