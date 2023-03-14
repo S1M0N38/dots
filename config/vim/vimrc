@@ -33,8 +33,8 @@ set showcmd
 set showmatch
 
 " colorscheme
-set background=dark
-silent! colorscheme gruvbox8
+" set background=dark
+" silent! colorscheme gruvbox8
 
 " cursor shape based on mode
 if exists('$TMUX')
