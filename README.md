@@ -62,7 +62,12 @@ cd ~/dots && git checkout rpi
 ln -f -s ~/dots/bashrc ~/.bashrc && \
 ln -f -s ~/dots/config ~/.config
 ```
-
+9. TODO Update linking
+```bash
+ln -s ~/dots/config/git ~/.config/git
+ln -s ~/dots/config/vim ~/.config/vim
+ln -s ~/dots/config/tmux ~/.config/tmux
+```
 ---
 
 ## :strawberry: Projects
