@@ -149,3 +149,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Activate conda env and navigate to code dir
+conda activate master-thesis
+cd ~/master-thesis/code/
