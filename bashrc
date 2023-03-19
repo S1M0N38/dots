@@ -153,3 +153,4 @@ unset __conda_setup
 # Activate conda env and navigate to code dir
 conda activate master-thesis
 cd ~/master-thesis/code/
+tmux attach
