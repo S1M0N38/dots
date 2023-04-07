@@ -6,7 +6,6 @@ config/lvim/plugin/
 config/mitmproxy/
 config/mpv/watch_later/
 config/nvm/
-config/tmux/
 config/htop/
 config/lazygit/
 
