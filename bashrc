@@ -88,8 +88,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -AlFh'
+alias la='ls -alF'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -126,6 +126,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="vim"
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
+# XDG Fixes
+export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
+
+# aliases
+alias tmux='tmux -f "$XDG_CONFIG_HOME/tmux/tmux.conf"'
+alias nvim='vim'
+
 # prompt
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
@@ -151,6 +158,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Activate conda env and navigate to code dir
-conda activate master-thesis
-cd ~/master-thesis/code/
+conda activate ontoimages
+cd ~/ontoimages
 tmux attach
