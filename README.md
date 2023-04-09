@@ -68,10 +68,13 @@ ln -f -s ~/dots/config ~/.config
 ## :strawberry: Projects
 
 - [VPN](https://gist.github.com/S1M0N38/77ad8d3cb5e481aa802d43636881279c) →
- install a vpn on raspberry pi.
+  install a vpn on raspberry pi.
 
 - [morningstreams](https://github.com/S1M0N38/morningstreams) →
-expose acestreams from morningstream in you local network.
+  expose acestreams from morningstream in you local network.
 
 - [cr-analysis](https://github.com/S1M0N38/cr-analysis/tree/main) →
-an exercise in data collection/analysis.
+  an exercise in data collection/analysis.
+
+- [Telegram-GPT](https://github.com/S1M0N38/Telegram-GPT) →
+  Your personal chatGPT as Telegram Bot.
