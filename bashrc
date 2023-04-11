@@ -132,6 +132,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 # aliases
 alias tmux='tmux -f "$XDG_CONFIG_HOME/tmux/tmux.conf"'
 alias nvim='vim'
+alias jn='jupyter notebook --no-browser --port 8379'
 
 # prompt
 function parse_git_dirty {
