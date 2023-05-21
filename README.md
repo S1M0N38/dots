@@ -42,8 +42,9 @@ ln -s ~/Developer/dots/keyboard ~/Library/LaunchAgents/com.local.KeyRemapping.pl
 ```bash
 brew install                                \
   bat htop exa fd fzf git go lazygit lf     \
-  neovim pyenv ripgrep skhd tectonic texlab \
+  neovim pyenv ripgrep skhd ffmpeg pipx     \
 ```
+(remember to `pipx ensurepath`)
 
 5. Install GUI programs
 ```bash
