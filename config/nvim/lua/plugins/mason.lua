@@ -14,6 +14,9 @@ return {
       -- python:
       "ruff", -- linter
       "ruff-lsp", -- lsp
+      "pyright", -- lsp
+      "isort", -- formatter
+      "black", -- formatter
 
       -- latex: lsp
       "tectonic",
