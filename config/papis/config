@@ -1,9 +1,21 @@
 [papers]
-dir = ~/Documents/papers
+dir = ~/Drive/papers
+
+[thesis]
+dir = ~/Developer/master-thesis/papers
+
+[books]
+dir = ~/Drive/books
+
+[onto-xai]
+dir = ~/Developer/onto-xai/papers
+
+[encoders]
+dir = ~/Developer/encoders/papers
 
 [settings]
 opentool = open
-default-library = papers
+default-library = thesis
 picktool = fzf
-add-confirm = True
-
+fzf-header-format = {c.Fore.GREEN}{doc[author_list][0][family]:11.11}{c.Style.RESET_ALL} {c.Fore.YELLOW}{doc[year]:4}{c.Style.RESET_ALL} {c.Fore.BLUE}{doc[title]}{c.Style.RESET_ALL}
+fzf-extra-flags = ["--ansi", "--multi", "-i", "--preview", "$XDG_CONFIG_HOME/papis/scripts/preview.sh {}", "--preview-window", "right:wrap"]
