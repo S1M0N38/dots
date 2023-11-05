@@ -12,7 +12,8 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+# ok for vim but not for neovim
+# export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export TERMINFO="$XDG_DATA_HOME/terminfo"
@@ -24,8 +25,8 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # applications
-export EDITOR="vim"
-export VISUAL="lvim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="alacritty"
 
 # locale
@@ -45,33 +46,29 @@ export LF_COLORS="$XDG_CONFIG_HOME/lf/colors"
 export LF_ICONS="$XDG_CONFIG_HOME/lf/icons"
 
 # bat
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="tokyonight"
 
-# gnuplot 
+# gnuplot
 export GNUTERM="qt font \"Arial,10\""
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS="
- --color fg:#ebdbb2,bg:#282828,hl:#fabd2f
- --color fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
- --color info:#83a598,prompt:#bdae93,spinner:#fabd2f
- --color pointer:#83a598,marker:#fe8019,header:#665c54"
-export FZF_CTRL_T_OPTS="
-  --no-height 
-  --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+export FZF_CTRL_T_OPTS=" \
+  --no-height \
+  --preview 'bat --color=always --style=numbers --line-range=:500 {}' \
+"
 
 # kaggle
 export KAGGLE_CONFIG_DIR="$XDG_CONFIG_HOME/kaggle"
 
 # PATH
-path+=/usr/local/opt/llvm/bin   # llvm
-path+=/usr/local/opt/fzf/bin    # fzf
-path+=$HOME/.local/bin          # pipx
-path+=$CARGO_HOME/env           # cargo
-path+=$GOPATH/bin               # go user bin
-path+=$GOROOT/bin               # go lib bin
+path+=/usr/local/texlive/2023/bin/universal-darwin # texlive
+path+=/usr/local/opt/llvm/bin                      # llvm
+path+=/usr/local/opt/fzf/bin                       # fzf
+path+=$HOME/.local/bin                             # pipx
+path+=$CARGO_HOME/bin                              # cargo
+path+=$GOPATH/bin                                  # go user bin
+path+=$GOROOT/bin                                  # go lib bin
 export PATH
 
 # FPATH
