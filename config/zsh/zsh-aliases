@@ -8,6 +8,9 @@ alias centai=" \
   -L 8377:localhost:8377 \
   -L 8378:localhost:8378 \
   -L 8379:localhost:8379 \
+  -L 8380:localhost:8380 \
+  -L 8381:localhost:8381 \
+  -L 8382:localhost:8382 \
 "
 
 # broadcasting
@@ -41,3 +44,11 @@ alias ltt='exa --tree --level=3 --group-directories-first'
 # mitmproxy XDG workaround
 alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
 alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
+
+# multiple neovim config
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-lazybk="NVIM_APPNAME=LazyVim.bk nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-tiny="NVIM_APPNAME=TinyVim nvim"
+alias nvim-leo="NVIM_APPNAME=LeoVim nvim"
+alias v="nvim-lazy"
