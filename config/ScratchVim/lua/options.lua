@@ -10,8 +10,13 @@ vim.opt.undolevels = 10000
 vim.opt.smoothscroll = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Cleaner statusbar
+vim.opt.winbar = "%=%m %f"
+vim.opt.laststatus = 0 -- 3 global statusline
+vim.opt.ruler = false
+vim.opt.showcmd = false
 vim.opt.showmode = false
-vim.opt.laststatus = 3
 
 -- Providers
 vim.g.loaded_python_provider = 0
@@ -32,7 +37,6 @@ vim.g.mapleader = " "
 
 -- Clear search with <esc>
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
-
 
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
