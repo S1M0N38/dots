@@ -2,13 +2,31 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- Globals for Dev plugins
-P = function(v)
-  print(vim.inspect(v))
-  return v
+local function augroup(name)
+  return vim.api.nvim_create_augroup("config_" .. name, { clear = true })
 end
 
+-- Compile single C file on save
 vim.api.nvim_create_autocmd("BufWritePost", {
+  group = augroup("compile_c"),
+  pattern = "*.c",
+  callback = function()
+    local cmd = "gcc " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r")
+    vim.fn.jobstart(cmd, {
+      on_exit = function(_, code, _)
+        if code == 0 then
+          vim.notify("Compiled", vim.log.levels.INFO)
+        else
+          vim.notify("Compilation failed", vim.log.levels.ERROR)
+        end
+      end,
+    })
+  end,
+})
+
+-- sync with server on save (only if the sync script exists)
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = augroup("sync_with_server"),
   callback = function()
     local path = vim.fn.getcwd() .. "/scripts/sync.sh"
     local file = io.open(path, "r")
