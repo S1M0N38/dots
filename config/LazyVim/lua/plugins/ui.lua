@@ -7,12 +7,21 @@ return {
   },
   {
     "nvimdev/dashboard-nvim",
-    opts = {
-      config = {
-        header = vim.split(string.rep("\n", 15), "\n"),
-        footer = {},
-      },
-    },
+    opts = function(_, opts)
+      local projects = {
+        action = "Telescope project",
+        desc = " Projects",
+        icon = " ",
+        key = "p",
+      }
+
+      projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
+      projects.key_format = "  %s"
+      table.insert(opts.config.center, 3, projects)
+
+      opts.config.header = vim.split(string.rep("\n", 15), "\n")
+      opts.config.footer = {}
+    end,
   },
   {
     "folke/noice.nvim",
