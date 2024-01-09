@@ -33,6 +33,8 @@ return {
             any = {
               { find = "%d fewer lines" },
               { find = "%d more lines" },
+              { find = "%d lines moved" },
+              { find = "%d lines indented" },
               { find = "%d lines <ed %d time[s]?" },
               { find = "%d lines >ed %d time[s]?" },
               { find = "%d lines yanked" },
