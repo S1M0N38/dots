@@ -1,0 +1,19 @@
+{
+  "neodev": {
+    "library": {
+      "enabled": true,
+      "plugins": ["nvim-lspconfig"]
+    }
+  },
+  "lspconfig": {
+    "lua_ls": {
+      "Lua.workspace.library": [
+        "~/Developer/dots/config/hammerspoon/Spoons/EmmyLua.spoon/annotations"
+      ],
+      "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "undefined-field"
+      ]
+    }
+  }
+}
