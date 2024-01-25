@@ -7,7 +7,7 @@ config/mitmproxy/
 config/mpv/watch_later/
 config/nvm/
 config/htop/
-config/lazygit/
+config/lazygit/state.yml
 config/tensorboard/
 config/github-copilot/
 
